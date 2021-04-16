@@ -3,10 +3,7 @@ package com.philipprayitno.rayonmobile
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
 import android.view.View
-import android.widget.Button
 import android.widget.ImageButton
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -35,8 +32,14 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun showRecyclerList() {
         rvProducts.layoutManager = LinearLayoutManager(this)
-        val listHeroAdapter = HomeProductsAdapter(list)
-        rvProducts.adapter = listHeroAdapter
+        val adapter = HomeProductsAdapter(list)
+        rvProducts.adapter = adapter
+
+        adapter.setOnItemClickCallback(object : HomeProductsAdapter.OnItemClickCallback {
+            override fun onItemClicked(data: Product) {
+                navigateToDetail(data)
+            }
+        })
     }
 
     override fun onClick(v: View?) {
@@ -46,5 +49,15 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener {
                 startActivity(intent)
             }
         }
+    }
+
+    private fun navigateToDetail(product: Product) {
+        val intent = Intent(this@HomeActivity, ProductDetail::class.java)
+
+        intent.putExtra(ProductDetail.EXTRA_NAME, product.name)
+        intent.putExtra(ProductDetail.EXTRA_DESCRIPTION, product.detail)
+        intent.putExtra(ProductDetail.EXTRA_IMAGE, product.photo)
+
+        startActivity(intent)
     }
 }
