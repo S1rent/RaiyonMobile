@@ -1,47 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:layout_gravity="center"
-    tools:context=".ProfileActivity">
-
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:layout_marginTop="20dp"
-        android:id="@+id/img_profile_picture"
-        android:layout_width="wrap_content"
-        android:layout_height="200dp"
-        android:src="@drawable/img_profile_picture"
-        android:layout_gravity="center"
-        />
-
+    xmlns:android="http://schemas.android.com/apk/res/android">
     <LinearLayout
-        android:layout_marginTop="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="@color/black"
-        />
-
-    <TextView
-        android:layout_marginTop="20dp"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/philip_indra_prayitno"
-        android:textStyle="bold"
-        android:textSize="25sp"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        />
+        android:orientation="vertical"
+        tools:context=".ProfileActivity">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/philip_prayitno_gmail_com"
-        android:textSize="20sp"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_marginTop="20dp"
+            android:id="@+id/img_profile_picture"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:src="@drawable/img_profile_picture"
+            android:layout_gravity="center"
+            />
 
-</LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/black"
+            />
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/philip_indra_prayitno"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/philip_prayitno_gmail_com"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            />
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/black"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/place_date_birth"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:layout_marginTop="20dp"
+            />
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/black"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/university_desc"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:layout_marginTop="20dp"
+            />
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/black"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/work_desc"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:layout_marginTop="20dp"
+            android:paddingBottom="32dp"
+            />
+
+    </LinearLayout>
+</ScrollView>
